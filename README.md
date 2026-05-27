@@ -48,6 +48,7 @@
     ```
 
 ## Python start server
+    python manage.py migrate
 
     ``` bash
         python manage.py runserver
