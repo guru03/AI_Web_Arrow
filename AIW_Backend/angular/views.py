@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
-from AIW_Backend.angular.models import Angular
-from AIW_Backend.angular.serializers import AngularSerializer
+from angular.models import Angular
+from angular.serializers import AngularSerializer
 from rest_framework import viewsets, status
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.response import Response
@@ -11,8 +11,8 @@ from rest_framework.response import Response
 class AngularViewSet(viewsets.ModelViewSet):
     queryset = Angular.objects.all()
     serializer_class = AngularSerializer
-
-
+ 
+    
 @api_view(["POST"])
 def update_angular(request):
     try:
